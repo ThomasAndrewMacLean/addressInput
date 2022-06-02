@@ -44,8 +44,8 @@ const AddressInput = ({
         placeholder="Address"
       />
       <datalist id={"list" + id}>
-        {typeAheads.map((address) => {
-          return <option value={address.name} />;
+        {typeAheads.map((address, index) => {
+          return <option key={index} value={address.name} />;
         })}
       </datalist>
     </div>
