@@ -27,8 +27,8 @@ const AddressInput = ({ id = "addressInput", label, API_KEY, }) => {
     return (React.createElement("div", { className: "AddressInput" },
         label && React.createElement("label", { htmlFor: id }, label),
         React.createElement("input", { list: "list" + id, onChange: searchAddress, value: search, id: id, type: "text", placeholder: "Address" }),
-        React.createElement("datalist", { id: "list" + id }, typeAheads.map((address) => {
-            return React.createElement("option", { value: address.name });
+        React.createElement("datalist", { id: "list" + id }, typeAheads.map((address, index) => {
+            return React.createElement("option", { key: index, value: address.name });
         }))));
 };
 export default AddressInput;
